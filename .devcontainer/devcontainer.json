@@ -1,0 +1,64 @@
+{
+  "name": "IsaacSim Dual-Arm Effort-Control Dev",
+  "build": { 
+      "dockerfile": "Dockerfile", 
+      "context": ".." 
+  },
+  "remoteUser": "developer",
+  "workspaceFolder": "/ros2_ws",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/ros2_ws,type=bind,consistency=cached",
+  "privileged": true,
+
+
+  "runArgs": [
+    "--gpus=all",
+    "--env=ACCEPT_EULA=Y",           // Isaac Sim EULA
+    "--network=host",
+    "--ipc=host",
+    "--cap-add=SYS_NICE",
+    "--ulimit=rtprio=98",
+    "--ulimit=memlock=-1",
+    "--security-opt=seccomp:unconfined",
+    "--device=/dev/dri",
+    "--group-add=dialout",
+    "--group-add=video",
+    "--shm-size=2g"
+  ],
+
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}",
+    "QT_X11_NO_MITSHM": "1",
+    "ROS_DOMAIN_ID": "42",
+    "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp",
+    "KIT_SHADER_CACHE_DIR": "/home/developer/.cache/isaac-sim/shaders"
+  },
+
+"postCreateCommand": "sudo apt-get update && rosdep update && sudo rosdep install --from-paths /ros2_ws/src -ir --rosdistro humble && mkdir -p /ros2_ws/build /ros2_ws/install /ros2_ws/log && sudo chown -R developer:developer /ros2_ws && echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc && echo 'if [ -f \"/ros2_ws/install/setup.bash\" ]; then source /ros2_ws/install/setup.bash; fi' >> ~/.bashrc",  
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "ros.distro": "humble",
+        "actionButtons": {
+          "commands": [
+            { "name": "🔨 Build WS", "cwd": "/ros2_ws", "command": "colcon build --symlink-install", "color": "green" },
+            { "name": "♻️ Source Setup", "command": "source /ros2_ws/install/setup.bash", "color": "yellow" },
+            { "name": "📥 Import Repos", "cwd": "/ros2_ws", "command": "vcs import src < /ros2_ws/dep.repos", "color": "blue" }
+          ]
+        }
+      },
+      "extensions": [
+        "ms-iot.vscode-ros",
+        "ms-python.python",
+        "ms-azuretools.vscode-docker",
+        "seunlanlege.action-buttons",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  },
+
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  }
+}

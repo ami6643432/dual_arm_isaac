@@ -1,0 +1,7 @@
+[ 75%] Built target gtest
+[ 75%] Built target gtest_main
+[ 75%] Built target topic_based_ros2_control
+[100%] Built target topic_based_system_test
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /ros2_ws/install/topic_based_ros2_control/share/topic_based_ros2_control//topic_based_ros2_control_plugin_description.xml

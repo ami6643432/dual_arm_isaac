@@ -1,0 +1,27 @@
+[0.327s] Invoking command in '/ros2_ws/build/topic_based_ros2_control': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/topic_based_ros2_control -- -j24 -l24
+[0.491s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[0.491s] [35m[1mConsolidate compiler generated dependencies of target topic_based_ros2_control[0m
+[0.493s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[0.931s] [ 75%] Built target gtest_main
+[0.939s] [ 75%] Built target topic_based_ros2_control
+[0.939s] [ 75%] Built target gtest
+[0.957s] [35m[1mConsolidate compiler generated dependencies of target topic_based_system_test[0m
+[1.402s] [100%] Built target topic_based_system_test
+[1.424s] Invoked command in '/ros2_ws/build/topic_based_ros2_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/topic_based_ros2_control -- -j24 -l24
+[1.441s] Invoking command in '/ros2_ws/build/topic_based_ros2_control': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/topic_based_ros2_control
+[1.454s] -- Install configuration: ""
+[1.563s] -- Execute custom install script
+[1.666s] -- Symlinking: /ros2_ws/install/topic_based_ros2_control/share/topic_based_ros2_control//topic_based_ros2_control_plugin_description.xml
+[1.681s] CMake Error: failed to create symbolic link '/ros2_ws/install/topic_based_ros2_control/share/topic_based_ros2_control//topic_based_ros2_control_plugin_description.xml': Operation not permitted
+[1.683s] [31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:302 (message):
+[1.683s]   Could not create symlink
+[1.683s]   '/ros2_ws/install/topic_based_ros2_control/share/topic_based_ros2_control//topic_based_ros2_control_plugin_description.xml'
+[1.683s]   pointing to
+[1.683s]   '/ros2_ws/src/topic_based_ros2_control/topic_based_ros2_control_plugin_description.xml'
+[1.683s] Call Stack (most recent call first):
+[1.683s]   ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:155 (_ament_cmake_symlink_install_create_symlink)
+[1.684s]   ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:314 (ament_cmake_symlink_install_files)
+[1.684s]   cmake_install.cmake:46 (include)
+[1.684s] 
+[1.684s] [0m
+[1.686s] Invoked command in '/ros2_ws/build/topic_based_ros2_control' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/topic_based_ros2_control

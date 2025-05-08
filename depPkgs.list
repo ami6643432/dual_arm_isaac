@@ -1,0 +1,6 @@
+python3-ament-package
+ros-humble-ament-cmake
+ros-humble-ament-cmake-gmock
+ros-humble-rmw-cyclonedds-cpp
+ros-humble-rosidl-default-generators
+ros-humble-rosidl-typesupport-c
