@@ -33,7 +33,7 @@
     "KIT_SHADER_CACHE_DIR": "/home/developer/.cache/isaac-sim/shaders"
   },
 
-"postCreateCommand": "sudo apt-get update && rosdep update && sudo rosdep install --from-paths /ros2_ws/src -ir --rosdistro humble && mkdir -p /ros2_ws/build /ros2_ws/install /ros2_ws/log && sudo chown -R developer:developer /ros2_ws && echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc && echo 'if [ -f \"/ros2_ws/install/setup.bash\" ]; then source /ros2_ws/install/setup.bash; fi' >> ~/.bashrc",  
+"postCreateCommand": "sudo apt-get update && rosdep update && sudo rosdep install --from-paths /ros2_ws/src -ir --rosdistro humble && mkdir -p /ros2_ws/build /ros2_ws/install /ros2_ws/log && sudo chown -R developer:developer /ros2_ws && echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc && echo 'if [ -f \"/ros2_ws/install/setup.bash\" ]; then source /ros2_ws/install/setup.bash; fi' >> ~/.bashrc && sudo mkdir -p /isaac-sim/kit/exts/omni.gpu_foundation/cache/nv_shadercache && sudo chown -R developer:developer /isaac-sim/kit/exts/omni.gpu_foundation/cache",  
   "customizations": {
     "vscode": {
       "settings": {

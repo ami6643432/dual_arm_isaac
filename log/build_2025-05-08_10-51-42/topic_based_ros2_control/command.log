@@ -1,4 +1,0 @@
-Invoking command in '/ros2_ws/build/topic_based_ros2_control': /usr/bin/cmake --build /ros2_ws/build/topic_based_ros2_control -- -j24 -l24
-Invoked command in '/ros2_ws/build/topic_based_ros2_control' returned '0': /usr/bin/cmake --build /ros2_ws/build/topic_based_ros2_control -- -j24 -l24
-Invoking command in '/ros2_ws/build/topic_based_ros2_control': /usr/bin/cmake --install /ros2_ws/build/topic_based_ros2_control
-Invoked command in '/ros2_ws/build/topic_based_ros2_control' returned '1': /usr/bin/cmake --install /ros2_ws/build/topic_based_ros2_control
